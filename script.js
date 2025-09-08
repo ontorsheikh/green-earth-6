@@ -135,14 +135,20 @@ const showProductDetails = plant => {
 
 let cart = [];
 
+const cartCountFun = () => {
+  const cartCount = getId("cartCount");
+  cartCount.innerText = cart.length
+}
+
 const addToCart = async id => {
   const url = `https://openapi.programming-hero.com/api/plant/${id}`;
   const plant = await fetch(url).then(res=>res.json()).then(plant=>plant.plants)
+  alert(`${plant.name} has been added to the cart.`);
   cart.push(plant);
-  showCart(cart);
+  showCart();
 }
 
-const showCart = carts => {
+const showCart = () => {
   let totalPrice = 0;
 
   const cartDivs = document.querySelectorAll(".cartDiv");
@@ -152,7 +158,8 @@ const showCart = carts => {
 
     cartDiv.innerHTML = "";
 
-    carts.forEach(plant => {
+    cart.forEach((plant,index) => {
+      
 
       cartDiv.innerHTML += `
     <div class="flex justify-between items-center">
@@ -162,25 +169,27 @@ const showCart = carts => {
               ><i class="fa-solid fa-bangladeshi-taka-sign"></i>${plant.price}</span
             >
           </div>
-          <i onclick="removeFromCart(${plant.id})" class="fa-solid fa-xmark text-gray-500 text-sm cursor-pointer"></i>
+          <i onclick="removeFromCart(${index})" class="fa-solid fa-xmark text-gray-500 text-sm cursor-pointer"></i>
         </div>
     `
     })
     
   })
 
-  carts.forEach(item => totalPrice += item.price)
+  cart.forEach(item => totalPrice += item.price)
 
   totalPriceSpan.forEach(span => span.innerHTML = totalPrice)
 
+  cartCountFun();
+
 }
 
-const removeFromCart = id => {
-  cart = cart.filter(item => item.id != id)
-  showCart(cart);
+const removeFromCart = index => {
+  cart.splice(index,1)
+  showCart();
 }
 
 
 loadAllCategory();
 loadAllProducts();
-showCart(cart);
+// showCart();

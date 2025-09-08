@@ -147,13 +147,13 @@
     <!---------- Small cart icon ---------->
     <section
       onclick="showSmallCart()"
-      class="fixed bottom-10 right-2 sm:hidden"
+      class="fixed bottom-10 right-2 sm:hidden bg-white p-3 rounded-lg"
     >
       <i
-        class="fa-solid fa-cart-shopping text-xl text-red-500 cursor-pointer relative"
+        class="fa-solid fa-cart-shopping text-3xl text-red-500 cursor-pointer relative"
       >
-        <span
-          class="absolute -top-2 -right-1 text-red-500 bg-green-500 p-1 text-[8px] text-center rounded-[50%] font-bold"
+        <span id="cartCount"
+          class="absolute -top-2 -right-2 text-white bg-green-500 px-2 py-1 text-xs text-center rounded-[50%] font-bold"
           >0</span
         >
       </i>
@@ -162,7 +162,7 @@
     <!---------- Small cart section ---------->
     <section
       id="smallCartSec"
-      class="fixed top-20 right-2 bg-white w-full max-w-60 rounded-lg p-3 hidden"
+      class="fixed top-20 right-2 bg-white w-full h-10/12 max-w-60 rounded-lg p-3 hidden"
     >
       <div class="flex justify-between items-center">
         <h2 class="font-semibold text-2xl">Your Cart</h2>
@@ -170,7 +170,7 @@
       </div>
 
       <div
-        class="cartDiv mt-5 flex flex-col gap-3 max-h-[480px] overflow-y-auto"
+        class="cartDiv mt-5 flex flex-col gap-3 max-h-[400px] overflow-y-auto"
       ></div>
 
       <div class="mt-5 flex justify-between items-center">
@@ -181,6 +181,7 @@
         >
       </div>
     </section>
+
 
 
 <!-- main part END -->
@@ -258,41 +259,38 @@
 <!-- plant a tree today -->
 
 
-<section class="w-full bg-[#166534] h-[591px] flex flex-col justify-center items-center gap-6">
+<!---------- Plant ---------->
+    <section class="px-8 py-14 bg-green-800">
+      <h2 class="text-3xl text-white font-semibold text-center mb-10">
+        Plant a Tree Today
+      </h2>
+      <div
+        class="max-w-2xl mx-auto bg-green-700 p-5 sm:p-10 rounded-lg flex flex-col gap-3"
+      >
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="input w-full bg-white"
+        />
+        <input
+          type="email"
+          placeholder="Your Email Address"
+          class="input w-full bg-white"
+        />
+        <select class="select w-full bg-white">
+          <option disabled selected>Select Trees</option>
+          <option>Mango Tree</option>
+          <option>Palm Tree</option>
+          <option>Bambo tree</option>
+        </select>
+        <button class="btn btn-warning rounded-4xl text-green-800">
+          Donate Now
+        </button>
+      </div>
+    </section>
 
-  <div>
-    <h2 class=" text-2xl text-white font-semibold">Plant a Tree Today</h2>
-  </div>
-<div class="w-full max-w-[650px] h-[250px] md:h-[311px] bg-[#15803D] shadow-2xl rounded-xl flex flex-col justify-center items-center">
-
-  <form action="">
-    <input type="text" placeholder="Your Name" class="input input-sm " />
-<br><br>
-    <input type="text" placeholder="Your Email Address" class="input input-sm" />
-
-    <br><br>
 
 
-<div class="relative w-80">
-  <label for="tree" class="block text-sm font-medium mb-1"></label>
-  <select id="tree" class="input input-sm w-full appearance-none pr-8">
-    <option value="" disabled selected>Number of Trees</option>
-    <option value="mango">আম</option>
-    <option value="apple">আপেল</option>
-    <option value="banana">কলা</option>
-    <option value="orange">কমলা</option>
-  </select>
-  <!-- Arrow icon centered vertically -->
-  <span class="absolute right-2 -top-5transform -translate-y-0.5 text-gray-500 pointer-events-none"><i class="fa-solid fa-circle-chevron-down"></i></span>
-</div>
-<br>
-
-
-<button class="btn w-80 bg-[#FACC15] rounded-3xl text-green-700 border-[#FACC15]">Donate Now</button>
-
-  </form>
-</div>
-</section>
 <!-- footer section -->
     <footer class="bg-[#14532D] h-[72px] flex justify-center items-center">
 
