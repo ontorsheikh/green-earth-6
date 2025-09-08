@@ -88,14 +88,14 @@ const showProducts = datas => {
             />
           </div>  
             <div class="flex flex-col gap-3">
-              <h2 onclick="loadProductDetails(${data.id})" class="font-semibold text-base cursor-pointer">${data.name}</h2>
-              <p class="text-sm line-clamp-3">${data.description}</p>
+              <h2 onclick="loadProductDetails(${data.id})" class="font-semibold text-base cursor-pointer text-black">${data.name}</h2>
+              <p class="text-sm line-clamp-3 text-black">${data.description}</p>
               <div class="flex justify-between items-center">
                 <span class="bg-green-200 text-green-950 px-3 py-1 rounded-3xl"
                   >${data.category}</span
                 >
                 <span
-                  ><i class="fa-solid fa-bangladeshi-taka-sign text-sm"></i
+                  ><i class="fa-solid fa-bangladeshi-taka-sign text-sm text-black"></i
                   >${data.price}</span
                 >
               </div>
@@ -118,14 +118,14 @@ const showProductDetails = plant => {
   const productDetails = getId("productDetails");
 
   productDetails.innerHTML = `
-        <h3 class="text-lg font-bold">${plant.name}</h3>
+        <h3 class="text-lg font-bold text-black">${plant.name}</h3>
         <img class="rounded-lg h-60 md:h-80 w-full object-cover object-center"
               src="${plant.image}"
               alt=""
             />
-        <h3 class="text-base font-medium">Category: <span class="text-sm font-normal">${plant.category}</span></h3>
-        <h3 class="text-base font-medium">Price: <span class="text-sm font-normal"><i class="fa-solid fa-bangladeshi-taka-sign text-sm"></i><span>${plant.price}</span></span></h3>
-        <h3 class="text-base font-medium">Description: <span class="text-sm font-normal">${plant.description}</span></h3>
+        <h3 class="text-base font-medium text-black">Category: <span class="text-sm font-normal text-black">${plant.category}</span></h3>
+        <h3 class="text-base font-medium text-black">Price: <span class="text-sm font-normal text-black"><i class="fa-solid fa-bangladeshi-taka-sign text-sm"></i><span>${plant.price}</span></span></h3>
+        <h3 class="text-base font-medium text-black">Description: <span class="text-sm font-normal text-black">${plant.description}</span></h3>
         `
         
   getId("my_modal_5").showModal()
@@ -164,9 +164,9 @@ const showCart = () => {
       cartDiv.innerHTML += `
     <div class="flex justify-between items-center">
           <div class="">
-            <h2 class="text-lg font-medium">${plant.name}</h2>
+            <h2 class="text-lg font-medium text-black">${plant.name}</h2>
             <span class="text-gray-500 text-base"
-              ><i class="fa-solid fa-bangladeshi-taka-sign"></i>${plant.price}</span
+              ><i class="fa-solid fa-bangladeshi-taka-sign text-black"></i>${plant.price}</span
             >
           </div>
           <i onclick="removeFromCart(${index})" class="fa-solid fa-xmark text-gray-500 text-sm cursor-pointer"></i>
