@@ -162,7 +162,7 @@ const showCart = () => {
       
 
       cartDiv.innerHTML += `
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center bg-[#DCFCE7]">
           <div class="">
             <h2 class="text-lg font-medium text-black">${plant.name}</h2>
             <span class="text-gray-500 text-base"
