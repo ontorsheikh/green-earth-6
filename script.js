@@ -80,7 +80,7 @@ const showProducts = datas => {
 
   datas.forEach((data) => {
     productsDiv.innerHTML += `
-    <div class="bg-white p-2 rounded-lg grid gap-2">
+    <div class="bg-white p-2 rounded-lg grid gap-2 ">
           <div class="">
             <img class="rounded-lg h-56 w-full object-cover object-center"
               src="${data.image}"
