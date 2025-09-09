@@ -22,10 +22,10 @@ const loadAllCategory = () => {
 const showCategory = datas => {
   const categoryDiv = getId("categoryDiv");
 
-  categoryDiv.innerHTML = `<span onclick="loadAllProducts(this)" class="text-lg hover:!bg-green-800 hover:!text-white px-3 py-1 rounded-sm block cursor-pointer active">All Trees</span>`;
+  categoryDiv.innerHTML = `<span onclick="loadAllProducts(this)" class="text-lg hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer active">All Trees</span>`;
 
   datas.forEach((data) => {
-    categoryDiv.innerHTML += `<span onclick="loadCategoryProduct(${data.id},this)" class="text-lg hover:!bg-green-800 hover:!text-white px-3 py-1 rounded-sm block cursor-pointer">${data.category_name}</span>`;
+    categoryDiv.innerHTML += `<span onclick="loadCategoryProduct(${data.id},this)" class="text-lg hover:bg-green-800 hover:text-white px-3 py-1 rounded-sm block cursor-pointer">${data.category_name}</span>`;
   });
 };
 
