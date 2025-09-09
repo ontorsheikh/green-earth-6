@@ -94,7 +94,7 @@ const showProducts = datas => {
                 <span class="bg-green-200 text-green-950 px-3 py-1 rounded-3xl"
                   >${data.category}</span
                 >
-                <span
+                <span class="text-black"
                   ><i class="fa-solid fa-bangladeshi-taka-sign text-sm text-black"></i
                   >${data.price}</span
                 >
